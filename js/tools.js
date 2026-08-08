@@ -7,10 +7,28 @@ const noResults = document.getElementById("noResults");
 
 searchBox.addEventListener("input", function () {
 
-    const searchText = searchBox.value.toLowerCase();
+    const searchText = searchBox.value.trim().toLowerCase();
 
     let visibleTools = 0;
 
+
+    /* If search box is empty */
+
+    if (searchText === "") {
+
+        toolCards.forEach(function (card) {
+
+            card.style.display = "block";
+
+        });
+
+        noResults.style.display = "none";
+
+        return;
+    }
+
+
+    /* Search the tools */
 
     toolCards.forEach(function (card) {
 
@@ -31,6 +49,8 @@ searchBox.addEventListener("input", function () {
 
     });
 
+
+    /* Show or hide No Results message */
 
     if (visibleTools === 0) {
 
