@@ -4,38 +4,43 @@ const toolCards = document.querySelectorAll(".tool-card");
 
 const noResults = document.getElementById("noResults");
 
+const categoryButtons = document.querySelectorAll(".category");
 
-searchBox.addEventListener("input", function () {
 
-    const searchText = searchBox.value.trim().toLowerCase();
+let selectedCategory = "all";
+
+
+/* =========================
+   FILTER TOOLS
+========================= */
+
+function filterTools() {
+
+    const searchText =
+        searchBox.value.trim().toLowerCase();
 
     let visibleTools = 0;
 
 
-    /* If search box is empty */
-
-    if (searchText === "") {
-
-        toolCards.forEach(function (card) {
-
-            card.style.display = "block";
-
-        });
-
-        noResults.style.display = "none";
-
-        return;
-    }
-
-
-    /* Search the tools */
-
     toolCards.forEach(function (card) {
 
-        const cardText = card.textContent.toLowerCase();
+        const cardText =
+            card.textContent.toLowerCase();
+
+        const cardCategory =
+            card.dataset.category;
 
 
-        if (cardText.includes(searchText)) {
+        const matchesSearch =
+            cardText.includes(searchText);
+
+
+        const matchesCategory =
+            selectedCategory === "all" ||
+            cardCategory === selectedCategory;
+
+
+        if (matchesSearch && matchesCategory) {
 
             card.style.display = "block";
 
@@ -50,7 +55,9 @@ searchBox.addEventListener("input", function () {
     });
 
 
-    /* Show or hide No Results message */
+    /* =========================
+       NO RESULTS
+    ========================= */
 
     if (visibleTools === 0) {
 
@@ -61,5 +68,49 @@ searchBox.addEventListener("input", function () {
         noResults.style.display = "none";
 
     }
+
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+searchBox.addEventListener(
+    "input",
+    filterTools
+);
+
+
+/* =========================
+   CATEGORY BUTTONS
+========================= */
+
+categoryButtons.forEach(function (button) {
+
+    button.addEventListener(
+        "click",
+        function () {
+
+            selectedCategory =
+                button.dataset.category;
+
+
+            categoryButtons.forEach(
+                function (btn) {
+
+                    btn.classList.remove("active");
+
+                }
+            );
+
+
+            button.classList.add("active");
+
+
+            filterTools();
+
+        }
+    );
 
 });
