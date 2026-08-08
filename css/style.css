@@ -350,7 +350,18 @@ footer strong {
     .cards {
         grid-template-columns: 1fr;
     }
+.no-results {
+    display: none;
+    text-align: center;
+    padding: 50px 20px;
+    color: #6b7280;
+}
 
+.no-results h3 {
+    color: #111827;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
     .tools-grid {
         grid-template-columns: 1fr;
     }
