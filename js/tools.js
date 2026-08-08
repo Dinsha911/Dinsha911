@@ -1,13 +1,66 @@
 const searchBox = document.getElementById("toolSearch");
 
-const toolCards = document.querySelectorAll(".tool-card");
+const toolsGrid = document.getElementById("toolsGrid");
 
 const noResults = document.getElementById("noResults");
 
 const categoryButtons = document.querySelectorAll(".category");
 
-
 let selectedCategory = "all";
+
+
+/* =========================
+   CREATE TOOL CARDS
+========================= */
+
+function displayTools() {
+
+    toolsGrid.innerHTML = "";
+
+    toolsData.forEach(function (tool) {
+
+        const card = document.createElement("div");
+
+        card.className = "tool-card";
+
+        card.dataset.category = tool.category;
+
+
+        card.innerHTML = `
+
+            <div class="tool-icon">
+                ${tool.icon}
+            </div>
+
+            <span class="tool-category">
+                ${tool.category}
+            </span>
+
+            <h3>
+                ${tool.name}
+            </h3>
+
+            <p>
+                ${tool.description}
+            </p>
+
+            <a
+                href="${tool.website}"
+                class="tool-link"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Visit Tool →
+            </a>
+
+        `;
+
+
+        toolsGrid.appendChild(card);
+
+    });
+
+}
 
 
 /* =========================
@@ -18,6 +71,9 @@ function filterTools() {
 
     const searchText =
         searchBox.value.trim().toLowerCase();
+
+    const toolCards =
+        document.querySelectorAll(".tool-card");
 
     let visibleTools = 0;
 
@@ -54,10 +110,6 @@ function filterTools() {
 
     });
 
-
-    /* =========================
-       NO RESULTS
-    ========================= */
 
     if (visibleTools === 0) {
 
@@ -114,3 +166,12 @@ categoryButtons.forEach(function (button) {
     );
 
 });
+
+
+/* =========================
+   START WEBSITE
+========================= */
+
+displayTools();
+
+filterTools();
