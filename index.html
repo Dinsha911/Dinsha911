@@ -2,142 +2,331 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ShanexAI — AI, Explained.</title>
+    <title>ShanexAI — AI Resource Hub</title>
 
     <meta name="description"
-        content="ShanexAI — AI news, tools, prompts, trends and practical AI guides.">
+        content="ShanexAI is an AI resource hub for discovering AI tools, prompts, guides, news and trends.">
 
     <style>
-        body {
+
+        * {
+            box-sizing: border-box;
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f5f7fb;
-            color: #111827;
+            padding: 0;
         }
 
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f8fc;
+            color: #111827;
+            line-height: 1.6;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
         header {
-            background: #111827;
-            color: white;
-            padding: 20px 8%;
+            background: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 18px 7%;
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         .logo {
-            font-size: 24px;
-            font-weight: bold;
+            font-size: 25px;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .logo span {
+            color: #6366f1;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
         }
 
         nav a {
-            color: white;
             text-decoration: none;
-            margin-left: 25px;
+            color: #374151;
+            font-size: 14px;
+            font-weight: 600;
         }
+
+        nav a:hover {
+            color: #6366f1;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
 
         .hero {
             text-align: center;
-            padding: 100px 20px;
-            background: white;
+            padding: 100px 20px 90px;
+            background: linear-gradient(135deg, #eef2ff, #ffffff);
+        }
+
+        .hero-label {
+            display: inline-block;
+            background: #e0e7ff;
+            color: #4338ca;
+            padding: 7px 14px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 20px;
         }
 
         .hero h1 {
-            font-size: 52px;
-            margin-bottom: 15px;
+            font-size: 58px;
+            line-height: 1.1;
+            letter-spacing: -2px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .hero h1 span {
+            color: #6366f1;
         }
 
         .hero p {
-            font-size: 20px;
+            max-width: 650px;
+            margin: 25px auto;
+            font-size: 19px;
             color: #6b7280;
         }
 
-        .buttons {
+        .hero-buttons {
             margin-top: 30px;
         }
 
         .button {
             display: inline-block;
-            padding: 14px 24px;
-            margin: 5px;
-            border-radius: 8px;
+            padding: 13px 22px;
+            border-radius: 9px;
             text-decoration: none;
+            font-weight: 700;
+            margin: 5px;
+        }
+
+        .button-primary {
             background: #111827;
             color: white;
         }
 
-        .section {
-            padding: 60px 8%;
+        .button-secondary {
+            background: white;
+            color: #111827;
+            border: 1px solid #d1d5db;
         }
 
-        .section h2 {
-            text-align: center;
-            margin-bottom: 40px;
+
+        /* =========================
+           GENERAL SECTIONS
+        ========================= */
+
+        .section {
+            max-width: 1150px;
+            margin: auto;
+            padding: 75px 20px;
         }
+
+        .section-header {
+            margin-bottom: 35px;
+        }
+
+        .section-header h2 {
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        .section-header p {
+            color: #6b7280;
+        }
+
+
+        /* =========================
+           CARDS
+        ========================= */
 
         .cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
         }
 
         .card {
             background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            padding: 28px;
+            border-radius: 15px;
+            border: 1px solid #e5e7eb;
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .icon {
+            font-size: 30px;
+            margin-bottom: 15px;
         }
 
         .card h3 {
-            margin-top: 0;
+            margin-bottom: 8px;
+            font-size: 19px;
         }
 
-        footer {
-            text-align: center;
-            padding: 30px;
+        .card p {
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           FEATURED SECTION
+        ========================= */
+
+        .featured {
             background: #111827;
             color: white;
         }
+
+        .featured .section-header p {
+            color: #9ca3af;
+        }
+
+        .featured-card {
+            background: #1f2937;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        .featured-card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .featured-card p {
+            color: #d1d5db;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #030712;
+            color: #9ca3af;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        footer strong {
+            color: white;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            nav {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
     </style>
+
 </head>
 
+
 <body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
     <div class="logo">
-        ShanexAI
+        Shanex<span>AI</span>
     </div>
 
     <nav>
+
         <a href="#">Home</a>
-        <a href="#">AI News</a>
-        <a href="#">Tools</a>
-        <a href="#">Prompts</a>
-        <a href="#">Trends</a>
+
+        <a href="#tools">AI Tools</a>
+
+        <a href="#prompts">Prompts</a>
+
+        <a href="#guides">Guides</a>
+
+        <a href="#news">News</a>
+
     </nav>
 
 </header>
 
 
+<!-- =========================
+     HERO
+========================= -->
+
 <section class="hero">
 
-    <h1>AI, Explained.</h1>
+    <div class="hero-label">
+        🚀 Your AI Resource Hub
+    </div>
+
+    <h1>
+        Discover the
+        <span>AI tools</span>
+        that matter.
+    </h1>
 
     <p>
-        Discover AI news, tools, prompts, trends and practical guides.
+        Explore useful AI tools, powerful prompts, practical guides,
+        important news and the trends shaping the future.
     </p>
 
-    <div class="buttons">
+    <div class="hero-buttons">
 
-        <a class="button" href="#tools">
+        <a href="#tools" class="button button-primary">
             Explore AI Tools
         </a>
 
-        <a class="button" href="#prompts">
-            Explore Prompts
+        <a href="#prompts" class="button button-secondary">
+            Browse Prompts
         </a>
 
     </div>
@@ -145,52 +334,100 @@
 </section>
 
 
+<!-- =========================
+     TOOLS
+========================= -->
+
 <section class="section" id="tools">
 
-    <h2>Explore ShanexAI</h2>
+    <div class="section-header">
+
+        <h2>🤖 Explore AI Tools</h2>
+
+        <p>
+            Discover AI tools for work, creativity, business and everyday tasks.
+        </p>
+
+    </div>
+
 
     <div class="cards">
 
         <div class="card">
-            <h3>📰 AI News</h3>
+
+            <div class="icon">✍️</div>
+
+            <h3>Writing AI</h3>
+
             <p>
-                Follow important developments and updates in artificial intelligence.
+                Tools for writing, rewriting, research and content creation.
             </p>
+
         </div>
+
 
         <div class="card">
-            <h3>🤖 AI Tools</h3>
+
+            <div class="icon">🎨</div>
+
+            <h3>Image AI</h3>
+
             <p>
-                Discover useful AI tools for work, creativity, business and everyday life.
+                Discover tools for creating and editing images with AI.
             </p>
+
         </div>
 
-        <div class="card" id="prompts">
-            <h3>🧠 AI Prompts</h3>
-            <p>
-                Find practical prompts you can copy, customize and use.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>📈 AI Trends</h3>
-            <p>
-                Understand the technologies and trends shaping the future of AI.
-            </p>
-        </div>
 
         <div class="card">
-            <h3>🎓 AI Guides</h3>
+
+            <div class="icon">🎬</div>
+
+            <h3>Video AI</h3>
+
             <p>
-                Beginner-friendly guides that explain AI without complicated technical language.
+                Explore AI tools for video creation, editing and animation.
             </p>
+
         </div>
 
+
         <div class="card">
-            <h3>💡 AI Ideas</h3>
+
+            <div class="icon">🎙️</div>
+
+            <h3>Audio AI</h3>
+
             <p>
-                Explore practical ways to use AI for projects, productivity and business.
+                Find tools for voice generation, music and audio production.
             </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">💻</div>
+
+            <h3>Coding AI</h3>
+
+            <p>
+                AI tools that help developers build software faster.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">📊</div>
+
+            <h3>Productivity AI</h3>
+
+            <p>
+                Tools that help you work smarter and save time.
+            </p>
+
         </div>
 
     </div>
@@ -198,11 +435,179 @@
 </section>
 
 
+<!-- =========================
+     PROMPTS
+========================= -->
+
+<section class="section" id="prompts">
+
+    <div class="section-header">
+
+        <h2>🧠 Prompt Library</h2>
+
+        <p>
+            Practical prompts you can copy, customize and use.
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="icon">💼</div>
+
+            <h3>Business Prompts</h3>
+
+            <p>
+                Prompts for business ideas, planning, marketing and strategy.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">📱</div>
+
+            <h3>Content Prompts</h3>
+
+            <p>
+                Create social media posts, videos, articles and content ideas.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">🎨</div>
+
+            <h3>Image Prompts</h3>
+
+            <p>
+                Create better AI images using structured prompts.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     GUIDES
+========================= -->
+
+<section class="section" id="guides">
+
+    <div class="section-header">
+
+        <h2>🎓 Learn AI</h2>
+
+        <p>
+            Beginner-friendly guides without complicated technical language.
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="icon">🌱</div>
+
+            <h3>AI for Beginners</h3>
+
+            <p>
+                Start learning AI from the basics.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">⚡</div>
+
+            <h3>AI Productivity</h3>
+
+            <p>
+                Learn how to use AI to save time and work smarter.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">💰</div>
+
+            <h3>AI for Business</h3>
+
+            <p>
+                Explore practical ways businesses can use AI.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     NEWS
+========================= -->
+
+<section class="featured" id="news">
+
+    <div class="section">
+
+        <div class="section-header">
+
+            <h2>🔥 AI News & Trends</h2>
+
+            <p>
+                Important developments in the rapidly changing world of AI.
+            </p>
+
+        </div>
+
+
+        <div class="featured-card">
+
+            <h3>
+                ShanexAI is getting started 🚀
+            </h3>
+
+            <p>
+                We're building a practical AI resource hub covering
+                tools, prompts, guides, news and emerging AI trends.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
 
-    <p>© 2026 ShanexAI. All rights reserved.</p>
+    <p>
+        © 2026 <strong>ShanexAI</strong> — AI Resource Hub
+    </p>
 
 </footer>
+
 
 </body>
 
