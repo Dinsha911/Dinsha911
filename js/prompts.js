@@ -75,8 +75,7 @@ function displayPrompts() {
     });
 
 
-    addCopyButtons();
-
+    
 }
 
 
