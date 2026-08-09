@@ -58,10 +58,12 @@ function displayPrompts() {
                 ${prompt.description}
             </p>
 
-            <button
-                class="button button-primary copy-button"
-                data-prompt="${encodeURIComponent(prompt.prompt)}"
-            >
+          <a
+              href="prompt.html?id=${prompt.id}"
+             class="button button-primary"
+          >
+            View Prompt →
+           </a>
                 Copy Prompt
             </button>
 
