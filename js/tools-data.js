@@ -5,6 +5,7 @@ const toolsData = [
         category: "assistant",
         icon: "🤖",
         description: "AI assistant for writing, research, brainstorming and coding.",
+        pricing: "freemium",
         website: "https://chatgpt.com/"
     },
 
@@ -13,6 +14,7 @@ const toolsData = [
         category: "assistant",
         icon: "🧠",
         description: "AI assistant for writing, analysis, research and coding.",
+        pricing: "freemium",
         website: "https://claude.ai/"
     },
 
@@ -21,6 +23,7 @@ const toolsData = [
         category: "assistant",
         icon: "✨",
         description: "Google's AI assistant for research, writing and productivity.",
+        pricing: "freemium",
         website: "https://gemini.google.com/"
     },
 
@@ -29,6 +32,7 @@ const toolsData = [
         category: "image",
         icon: "🎨",
         description: "Discover AI tools for image generation and editing.",
+        pricing: "freemium",
         website: "#"
     },
 
@@ -37,6 +41,7 @@ const toolsData = [
         category: "video",
         icon: "🎬",
         description: "Discover AI tools for video generation and editing.",
+        pricing: "freemium",
         website: "#"
     },
 
@@ -45,6 +50,7 @@ const toolsData = [
         category: "coding",
         icon: "💻",
         description: "Discover AI tools that help developers write and understand code.",
+        pricing: "freemium",
         website: "#"
     }
 
