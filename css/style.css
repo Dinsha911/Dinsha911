@@ -372,3 +372,15 @@ footer strong {
     color: white;
     border-color: #111827;
 }
+.tool-pricing {
+    display: inline-block;
+    font-size: 12px;
+    background: #ecfdf5;
+    color: #047857;
+    padding: 4px 9px;
+    border-radius: 20px;
+    margin-left: 5px;
+    margin-bottom: 12px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
