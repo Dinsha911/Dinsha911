@@ -159,9 +159,7 @@ categories.forEach(function (button) {
 
 
             selectedCategory =
-                button.textContent
-                    .toLowerCase()
-                    .trim();
+            button.dataset.category;
 
 
             if (
