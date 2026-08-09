@@ -37,6 +37,12 @@ if (promptData) {
     promptPage.innerHTML = `
 
         <div class="prompt-detail">
+        <a
+       href="prompts.html"
+       class="back-to-prompts"
+        >
+       ← Back to Prompts
+          </a>
 
             <div class="tool-icon">
                 ${promptData.icon}
