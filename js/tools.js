@@ -33,7 +33,11 @@ function displayTools() {
             </div>
 
             <span class="tool-category">
-                ${tool.category}
+            ${tool.category}
+            </span>
+
+            <span class="tool-pricing">
+            ${tool.pricing}
             </span>
 
             <h3>
