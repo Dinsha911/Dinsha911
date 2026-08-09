@@ -460,3 +460,25 @@ footer strong {
 .back-to-prompts:hover {
     opacity: 1;
 }
+/* =========================
+   COPY PROMPT BUTTON
+========================= */
+
+#copyFullPrompt {
+    min-width: 180px;
+    padding: 13px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.2s ease,
+                opacity 0.2s ease;
+}
+
+#copyFullPrompt:hover {
+    transform: translateY(-2px);
+}
+
+#copyFullPrompt:active {
+    transform: translateY(0);
+}
