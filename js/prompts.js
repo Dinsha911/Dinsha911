@@ -197,5 +197,57 @@ searchBox.addEventListener(
    COPY PROMPT
 ========================= */
 
+function addCopyButtons() {
+
+    const buttons =
+        document.querySelectorAll(
+            ".copy-button"
+        );
+
+
+    buttons.forEach(function (button) {
+
+        button.addEventListener(
+            "click",
+            async function () {
+
+                const prompt =
+                    decodeURIComponent(
+                        button.dataset.prompt
+                    );
+
+
+                await navigator.clipboard.writeText(
+                    prompt
+                );
+
+
+                button.textContent =
+                    "✓ Copied!";
+
+
+                setTimeout(
+                    function () {
+
+                        button.textContent =
+                            "Copy Prompt";
+
+                    },
+                    2000
+                );
+
+            }
+        );
+
+    });
+
+}
+
+
+/* =========================
+   START
+========================= */
+
+displayPrompts();
 
 filterPrompts();
