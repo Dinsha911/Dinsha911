@@ -1,6 +1,7 @@
 const promptsData = [
 
     {
+        id: "youtube-video-script",
         title: "YouTube Video Script",
         category: "writing",
         icon: "🎬",
@@ -31,6 +32,7 @@ Avoid unnecessary filler and generic statements.`
 
 
     {
+        id: "professional-email-writer",
         title: "Professional Email Writer",
         category: "writing",
         icon: "✉️",
@@ -54,6 +56,7 @@ Return only the finished email.`
 
 
     {
+        id: "ai-image-prompt-generator",
         title: "AI Image Prompt Generator",
         category: "image",
         icon: "🎨",
@@ -83,6 +86,7 @@ Write the final prompt as one polished prompt that can be used directly in an AI
 
 
     {
+        id: "social-media-caption",
         title: "Social Media Caption",
         category: "marketing",
         icon: "📣",
@@ -112,6 +116,7 @@ Add a suitable call to action and relevant hashtags.`
 
 
     {
+        id: "code-debugging-assistant",
         title: "Code Debugging Assistant",
         category: "coding",
         icon: "💻",
@@ -136,6 +141,7 @@ Do not rewrite the entire project unless necessary.`
 
 
     {
+        id: "daily-productivity-planner",
         title: "Daily Productivity Planner",
         category: "productivity",
         icon: "📊",
