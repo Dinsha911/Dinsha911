@@ -107,10 +107,9 @@ function displayNews() {
             <br><br>
 
             <a
-                href="${news.sourceUrl}"
+                href="news-article.html?id=${news.id}"
                 class="button button-primary"
-                target="_blank"
-                rel="noopener noreferrer"
+
             >
                 Read Source →
             </a>
