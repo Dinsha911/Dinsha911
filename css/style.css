@@ -482,3 +482,54 @@ footer strong {
 #copyFullPrompt:active {
     transform: translateY(0);
 }
+/* =========================
+   GUIDE TABLE OF CONTENTS
+========================= */
+
+.guide-toc {
+    text-align: left;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 25px 30px;
+    margin: 30px auto;
+    max-width: 800px;
+}
+
+.guide-toc h2 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.guide-toc ul {
+    margin: 15px 0 0;
+    padding-left: 20px;
+}
+
+.guide-toc li {
+    margin-bottom: 10px;
+}
+
+.guide-toc a {
+    text-decoration: none;
+}
+
+.guide-toc a:hover {
+    text-decoration: underline;
+}
+
+.guide-content {
+    text-align: left;
+}
+
+.guide-content h2 {
+    margin-top: 35px;
+}
+
+.guide-content p {
+    line-height: 1.8;
+}
+
+.guide-content li {
+    margin-bottom: 10px;
+}
