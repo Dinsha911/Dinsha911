@@ -75,12 +75,58 @@ if (guide) {
 
             </div>
 
-
-            <div class="prompt-box guide-content">
+<div class="guide-toc">
 
     <h2>
-        What Is Artificial Intelligence?
+        📖 In This Guide
     </h2>
+
+    <ul>
+
+        <li>
+            <a href="#what-is-ai">
+                What Is Artificial Intelligence?
+            </a>
+        </li>
+
+        <li>
+            <a href="#how-ai-works">
+                How Does AI Work?
+            </a>
+        </li>
+
+        <li>
+            <a href="#where-ai-used">
+                Where Do We Use AI?
+            </a>
+        </li>
+
+        <li>
+            <a href="#why-ai-important">
+                Why Is AI Important?
+            </a>
+        </li>
+
+        <li>
+            <a href="#simple-ai">
+                The Simple Way to Think About AI
+            </a>
+        </li>
+
+        <li>
+            <a href="#key-takeaway">
+                Key Takeaway
+            </a>
+        </li>
+
+    </ul>
+
+</div>
+            <div class="prompt-box guide-content">
+
+      <h2 id="what-is-ai">
+      What Is Artificial Intelligence?
+      </h2>
 
     <p>
         Artificial Intelligence, or AI, is
@@ -90,8 +136,8 @@ if (guide) {
     </p>
 
 
-    <h2>
-        How Does AI Work?
+    <h2 id="how-ai-works">
+      How Does AI Work?
     </h2>
 
     <p>
@@ -103,8 +149,8 @@ if (guide) {
     </p>
 
 
-    <h2>
-        Where Do We Use AI?
+    <h2 id="where-ai-used">
+      Where Do We Use AI?
     </h2>
 
     <ul>
@@ -136,9 +182,9 @@ if (guide) {
     </ul>
 
 
-    <h2>
-        Why Is AI Important?
-    </h2>
+   <h2 id="why-ai-important">
+      Why Is AI Important?
+   </h2>
 
     <p>
         AI is becoming part of many industries
@@ -149,7 +195,7 @@ if (guide) {
     </p>
 
 
-    <h2>
+    <h2 id="simple-ai">
         The Simple Way to Think About AI
     </h2>
 
@@ -161,7 +207,7 @@ if (guide) {
     </p>
 
 
-    <h2>
+    <h2 id="key-takeaway">
         Key Takeaway
     </h2>
 
